@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: url(../img/data08.png) no-repeat center;
+  background-size: 100% 100%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "LCdd";
+  src: url("../font/yjsz.TTF");
+}
+.lightGreen {
+  color: #01f3bf;
+}
+
+.yellow {
+  color: #ecd607;
+}
+
+.lightBlue {
+  color: #20dbfd;
+}
+
+.blue {
+  color: #01c0ff;
+}
+
+.green {
+  color: #12fe81;
+}
+
+.red {
+  color: #fe2c2f;
+}
+
+header {
+  justify-content: center;
+  margin: 0.5% 0;
+}
+header .headerImg {
+  width: 30%;
+  max-height: 48px;
+  align-self: center;
+}
+header h1 {
+  margin-bottom: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: linear-gradient(to top, #86919e, #ffffff);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.main {
+  padding: 0 1%;
+  color: #ffffff;
+}
+.main .left,
+.main .right {
+  width: 25%;
+}
+.main .left .title,
+.main .right .title {
+  background: url(../img/ksh33.png) no-repeat center;
+  background-size: 100%;
+  font-size: 1.2rem;
+  padding-bottom: 15px;
+  margin-top: 2%;
+}
+.main .left .chartHeight,
+.main .right .chartHeight {
+  height: 26vh;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothTitle .titleStyle {
+  width: 33.3%;
+  text-align: center;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothRecord {
+  height: 6vh;
+  align-items: center;
+  margin-top: 2%;
+  background: rgba(15, 47, 72, 0.8);
+  border: 1px solid #1380bd;
+  position: relative;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .tollBoothRight,
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .tollBoothMiddle,
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .tollBoothLeft {
+  width: 33.3%;
+  text-align: center;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .tollBoothRight .cellText,
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .tollBoothMiddle .cellText,
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .tollBoothLeft .cellText {
+  margin: 9%;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .tollBoothRight {
+  justify-content: center;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .tollBoothCell {
+  background: url(../img/ksh38.png) no-repeat center;
+  background-size: 90% 100%;
+  height: 5vh;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .box {
+  position: absolute;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .box:nth-of-type(1) {
+  top: -2px;
+  left: -2px;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .box:nth-of-type(2) {
+  top: -2px;
+  right: -2px;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .box:nth-of-type(3) {
+  left: -2px;
+  bottom: -2px;
+}
+.main .left .tollBooth .tollBoothContent .tollBoothRecord .box:nth-of-type(4) {
+  bottom: -2px;
+  right: -2px;
+}
+.main .middle {
+  width: 50%;
+  margin-top: 1.2rem;
+}
+.main .middle .up {
+  position: relative;
+  margin: 0.2rem 1rem;
+}
+.main .middle .up .smallCard {
+  background: url(../img/ksh40.png) no-repeat center;
+  width: 20%;
+}
+.main .middle .up .bigCard {
+  background: url(../img/ksh39.png) no-repeat center;
+  width: 30%;
+}
+.main .middle .up .smallCard,
+.main .middle .up .bigCard {
+  background-size: 100% 100%;
+  margin: 0 0.2rem;
+  padding-left: 1rem;
+  height: 14vh;
+}
+.main .middle .up .smallCard .title,
+.main .middle .up .bigCard .title {
+  height: 40%;
+  display: flex;
+  align-items: center;
+}
+.main .middle .up .mainNum {
+  font-size: 2.5rem;
+  line-height: 47px;
+  margin-right: 0.3rem;
+}
+.main .middle .up .text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.main .middle .down {
+  position: relative;
+  height: 75vh;
+  margin: 0.3rem 1rem;
+}
+.main .middle .down .cornerTL,
+.main .middle .down .cornerTR,
+.main .middle .down .cornerBL,
+.main .middle .down .cornerBR {
+  background-size: 100% 100%;
+  position: absolute;
+  width: 5%;
+  height: 6%;
+}
+.main .middle .down .cornerTL {
+  background: url(../img/ksh42.png) no-repeat;
+  top: 0;
+  left: 0;
+}
+.main .middle .down .cornerTR {
+  background: url(../img/ksh43.png) no-repeat right;
+  top: 0;
+  right: 0;
+}
+.main .middle .down .cornerBL {
+  background: url(../img/ksh45.png) no-repeat;
+  bottom: 0;
+  left: 0;
+}
+.main .middle .down .cornerBR {
+  background: url(../img/ksh44.png) no-repeat right;
+  bottom: 0;
+  right: 0;
+}
+.main .middle .down #TWMap {
+  background: url(../img/ksh41.png);
+  background-size: 100% 100%;
+}
+.main .middle .down #TWMap .animatedLine {
+  stroke-dasharray: 0.03;
+  stroke-dashoffset: 20;
+  -webkit-animation: dash 100s linear infinite;
+          animation: dash 100s linear infinite;
+}
+.main .middle .down .titleEle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.main .middle .down .titleEle .title {
+  font-size: 1.6rem;
+}
+.main .middle .down .titleEle .subTitle {
+  font-size: 1.2rem;
+}
+.main .middle .down .chargesToday {
+  width: calc(100% - 12px);
+  height: 180px;
+  z-index: 99;
+  background: rgba(16, 54, 87, 0.5);
+  border: 1px solid #345f92;
+  position: absolute;
+  bottom: 7px;
+  left: 6px;
+}
+.main .middle .down .chargesToday .selectArea {
+  width: 39%;
+  margin-left: 1%;
+}
+.main .middle .down .chargesToday .selectArea .areaTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1%;
+}
+.main .middle .down .chargesToday .selectArea .areaContent {
+  overflow-y: scroll;
+  height: 80%;
+}
+.main .middle .down .chargesToday .selectArea .areaContent::-webkit-scrollbar {
+  display: none;
+}
+.main .middle .down .chargesToday .selectArea .areaContent .twData {
+  width: 100%;
+}
+.main .middle .down .chargesToday .selectArea .areaContent .twData:hover {
+  cursor: pointer;
+  color: #01c0ff;
+}
+.main .middle .down .chargesToday .selectArea .areaContent .distData {
+  width: 33.3%;
+  line-height: 30px;
+}
+.main .middle .down .chargesToday .selectArea .areaContent .distData:hover {
+  cursor: pointer;
+  color: #01c0ff;
+}
+.main .middle .down .chargesToday .selectArea .areaContent .text.active {
+  color: #01c0ff;
+}
+.main .middle .down .chargesToday #pieChart1 {
+  width: 20%;
+}
+.main .middle .down .chargesToday #pieChart2 {
+  width: 20%;
+}
+.main .middle .down .chargesToday #pieChart3 {
+  width: 20%;
+}
+.main .right .monthEvent {
+  overflow: hidden;
+}
+.main .right .monthEvent .slide {
+  position: relative;
+}
+.main .right .monthEvent .slide #monthEventChart2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.main .right .tollBoothCharges .tollBoothChargesContent {
+  position: relative;
+}
+.main .right .tollBoothCharges .tollBoothChargesContent .chargeTable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+}
+.main .right .tollBoothCharges .tollBoothChargesContent .chargeTable .tableTitle {
+  border-bottom: 0.5px dashed #ffffff;
+}
+.main .right .tollBoothCharges .tollBoothChargesContent .chargeTable .tableNum0 {
+  border-bottom: 0.5px dashed #ffffff;
+}
+.main .right .tollBoothCharges .tollBoothChargesContent .chargeTable .tableNum1 {
+  border-bottom: 0.5px dashed #ffffff;
+}
+.main .right .tollBoothCharges .tollBoothChargesContent .chargeTable .tableNum2 {
+  border-bottom: 0.5px dashed #ffffff;
+}
+.main .right .tollBoothCharges .tollBoothChargesContent .chargeTable .tableNum3 {
+  border-bottom: 0.5px dashed #ffffff;
+}
+.main .right .tollBoothCharges .tollBoothChargesContent .chargeTable .num:nth-last-child(1) {
+  border-bottom: 0.5px solid #ffffff;
+}
+.main .right .tollBoothCharges .tollBoothChargesContent .chargeTable .left,
+.main .right .tollBoothCharges .tollBoothChargesContent .chargeTable .middle,
+.main .right .tollBoothCharges .tollBoothChargesContent .chargeTable .right {
+  width: 33.3%;
+  text-align: center;
+  margin-top: 0;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 20;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 20;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,386 @@
+$lightGreen: #01f3bf;
+$green: #12fe81;
+$lightBlue: #20dbfd;
+$blue: #01c0ff;
+$yallow: #ecd607;
+$red: #fe2c2f;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: url(../img/data08.png) no-repeat center;
+  background-size: 100% 100%;
+}
+ul,
+li {
+  list-style: none;
+}
+
+//引入外部字體
+@font-face {
+  font-family: 'LCdd';
+  src: url('../font/yjsz.TTF');
+}
+
+.lightGreen {
+  color: $lightGreen;
+}
+.yellow {
+  color: $yallow;
+}
+.lightBlue {
+  color: $lightBlue;
+}
+.blue {
+  color: $blue;
+}
+.green {
+  color: $green;
+}
+.red {
+  color: $red;
+}
+
+header {
+  justify-content: center;
+  margin: 0.5% 0;
+
+  .headerImg{
+    width: 30%;
+    max-height: 48px;
+    align-self: center;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    background: linear-gradient(to top, #86919e, #ffffff);
+    color: transparent;
+    background-clip: text;
+  }
+}
+
+.main {
+  padding: 0 1%;
+  color: #ffffff;
+
+  .left,
+  .right {
+    width: 25%;
+
+    .title {
+      background: url(../img/ksh33.png) no-repeat center;
+      background-size: 100%;
+      font-size: 1.2rem;
+      padding-bottom: 15px;
+      margin-top: 2%;
+    }
+    .chartHeight {
+      height: 26vh;
+    }
+  }
+
+  .left {
+    .tollBooth {
+      .tollBoothContent {
+        .tollBoothTitle {
+          .titleStyle {
+            width: 33.3%;
+            text-align: center;
+          }
+        }
+        .tollBoothRecord {
+          height: 6vh;
+          align-items: center;
+          margin-top: 2%;
+          background: rgba(15, 47, 72, 0.8);
+          border: 1px solid #1380bd;
+          position: relative;
+
+          .tollBoothRight,
+          .tollBoothMiddle,
+          .tollBoothLeft {
+            width: 33.3%;
+            text-align: center;
+
+            .cellText {
+              margin: 9%;
+            }
+          }
+          .tollBoothRight {
+            justify-content: center;
+          }
+
+          .tollBoothCell {
+            background: url(../img/ksh38.png) no-repeat center;
+            background-size: 90% 100%;
+            height: 5vh;
+          }
+
+          .box {
+            position: absolute;
+          }
+          .box:nth-of-type(1) {
+            top: -2px;
+            left: -2px;
+          }
+          .box:nth-of-type(2) {
+            top: -2px;
+            right: -2px;
+          }
+          .box:nth-of-type(3) {
+            left: -2px;
+            bottom: -2px;
+          }
+          .box:nth-of-type(4) {
+            bottom: -2px;
+            right: -2px;
+          }
+        }
+      }
+    }
+  }
+  .middle {
+    width: 50%;
+    margin-top: 1.2rem;
+
+    .up {
+      position: relative;
+      margin: 0.2rem 1rem;
+
+      .smallCard {
+        background: url(../img/ksh40.png) no-repeat center;
+
+        width: 20%;
+      }
+      .bigCard {
+        background: url(../img/ksh39.png) no-repeat center;
+        width: 30%;
+      }
+
+      .smallCard,
+      .bigCard {
+        background-size: 100% 100%;
+        margin: 0 0.2rem;
+        padding-left: 1rem;
+        height: 14vh;
+
+        .title {
+          height: 40%;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .card1 {
+      }
+      .card2 {
+      }
+      .card3 {
+      }
+      .card4 {
+      }
+
+      .mainNum {
+        font-size: 2.5rem;
+        line-height: 47px;
+        margin-right: 0.3rem;
+      }
+      
+      .text {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+    .down {
+      position: relative;
+      height: 75vh;
+      margin: 0.3rem 1rem;
+
+      .cornerTL,
+      .cornerTR,
+      .cornerBL,
+      .cornerBR {
+        background-size: 100% 100%;
+        position: absolute;
+        width: 5%;
+        height: 6%;
+      }
+
+      .cornerTL {
+        background: url(../img/ksh42.png) no-repeat;
+        top: 0;
+        left: 0;
+      }
+      .cornerTR {
+        background: url(../img/ksh43.png) no-repeat right;
+        top: 0;
+        right: 0;
+      }
+      .cornerBL {
+        background: url(../img/ksh45.png) no-repeat;
+        bottom: 0;
+        left: 0;
+      }
+      .cornerBR {
+        background: url(../img/ksh44.png) no-repeat right;
+        bottom: 0;
+        right: 0;
+      }
+
+      #TWMap {
+        background: url(../img/ksh41.png);
+        background-size: 100% 100%;
+        
+        .animatedLine {
+          stroke-dasharray: 0.03;
+          stroke-dashoffset: 20;
+          animation: dash 100s linear infinite;
+        }
+      }
+
+      .titleEle {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+
+        .title {
+          font-size: 1.6rem;
+        }
+        .subTitle {
+          font-size: 1.2rem;
+        }
+      }
+
+      .chargesToday {
+        width: calc(100% - 12px);
+        height: 180px;
+        z-index: 99;
+        background: rgba(16, 54, 87, 0.5);
+        border: 1px solid #345f92;
+        position: absolute;
+        bottom: 7px;
+        left: 6px;
+
+        .selectArea {
+          width: 39%;
+          margin-left: 1%;
+
+          .areaTitle {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 1%;
+          }
+          .areaContent {
+            overflow-y: scroll;
+            height: 80%;
+
+            &::-webkit-scrollbar {
+              //隱藏滾動條scrollbar
+              display: none;
+            }
+
+            .twData {
+              width: 100%;
+
+              &:hover {
+                cursor: pointer;
+                color: $blue;
+              }
+            }
+            .distData {
+              width: 33.3%;
+              line-height: 30px;
+
+              &:hover {
+                cursor: pointer;
+                color: $blue;
+              }
+            }
+
+            .text.active {
+              color: $blue;
+            }
+          }
+        }
+        #pieChart1 {
+          width: 20%;
+        }
+        #pieChart2 {
+          width: 20%;
+        }
+        #pieChart3 {
+          width: 20%;
+        }
+      }
+    }
+  }
+  .right {
+    .monthEvent {
+      overflow: hidden;
+
+      .slide {
+        position: relative;
+
+        #monthEventChart2 {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+    .tollBoothCharges {
+      .tollBoothChargesContent {
+        position: relative;
+
+        .chargeTable {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 55%;
+
+          .tableTitle {
+            border-bottom: 0.5px dashed #ffffff;
+          }
+          //for迴圈
+          @for $i from 0 to 4 {
+            .tableNum#{$i} {
+              border-bottom: 0.5px dashed #ffffff;
+            }
+          }
+          .num:nth-last-child(1) {
+            border-bottom: 0.5px solid #ffffff;
+          }
+
+          .left,
+          .middle,
+          .right {
+            width: 33.3%;
+            text-align: center;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 20;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

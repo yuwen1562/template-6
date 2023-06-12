@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link
+      rel="stylesheet"
+      href="../module/bootstrap-5.2.2-dist/css/bootstrap.css"
+    />
+    <script src="../module/jquery-3.6.1.min.js"></script>
+    <script src="../module/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
+    <script src="../module/Highcharts-Maps-10.3.2/code/highcharts.js"></script>
+    <script src="../module/Highcharts-Maps-10.3.2/code/highcharts-more.js"></script>
+    <script src="../module/highcharts-10.3.2/code/modules/solid-gauge.js"></script>
+    <script src="../module/Highcharts-Maps-10.3.2/code/modules/map.js"></script>
+    <script src="../module/amcharts5/index.js"></script>
+    <script src="../module/amcharts5/xy.js"></script>
+    <script src="../module/amcharts5/themes/Animated.js"></script>
+    <title>EME 戰情看板-6</title>
+  </head>
+  <body>
+    <header class="d-flex">
+      <img src="../img/ksh31.png" class="headerImg" />
+      <h1>EME 戰情看板-6</h1>
+      <img src="../img/ksh32.png" class="headerImg" />
+    </header>
+    <div class="main d-flex">
+      <div class="left">
+        <div class="trafficVolume">
+          <div class="title">交通流量</div>
+          <div id="trafficVolumeChart" class="chartHeight"></div>
+        </div>
+        <div class="vehicleTraffic">
+          <div class="title">交通工具流量</div>
+          <div id="vehicleTrafficChart" class="chartHeight"></div>
+        </div>
+        <div class="tollBooth">
+          <div class="title">收費站車流量</div>
+          <div class="tollBoothContent">
+            <div class="tollBoothTitle d-flex">
+              <div class="titleStyle">運輸方式</div>
+              <div class="titleStyle">客運量</div>
+              <div class="titleStyle">貨運量</div>
+            </div>
+            <div class="tollBoothRecord d-flex">
+              <div class="tollBoothRight d-flex">
+                <img src="../img/ksh35.png" />
+                <div class="modeTransport"></div>
+              </div>
+              <div class="tollBoothMiddle tollBoothCell lightGreen">
+                <div class="cellText"></div>
+              </div>
+              <div class="tollBoothLeft tollBoothCell yellow">
+                <div class="cellText"></div>
+              </div>
+              <img class="box" src="../img/ksh34.png" />
+              <img class="box" src="../img/ksh34.png" />
+              <img class="box" src="../img/ksh34.png" />
+              <img class="box" src="../img/ksh34.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="up d-flex">
+          <div class="smallCard card1">
+            <div class="title"><span>當前警報數(起)</span></div>
+            <div class="d-flex">
+              <div class="mainNum lightBlue"></div>
+              <div class="overflow-hidden">
+                <div class="text red"></div>
+                <div class="text green"></div>
+              </div>
+            </div>
+          </div>
+          <div class="bigCard card2">
+            <div class="title"><span>區域雍塞指數</span></div>
+            <div class="d-flex">
+              <div class="mainNum lightBlue"></div>
+              <div class="overflow-hidden">
+                <div class="text"></div>
+                <div class="text"></div>
+              </div>
+            </div>
+          </div>
+          <div class="smallCard card3">
+            <div class="title"><span>當前警報數(起)</span></div>
+            <div class="d-flex">
+              <div class="mainNum lightBlue"></div>
+              <div class="overflow-hidden">
+                <div class="text red"></div>
+                <div class="text green"></div>
+              </div>
+            </div>
+          </div>
+          <div class="bigCard card4">
+            <div class="title"><span>當前警報數(起)</span></div>
+            <div class="d-flex">
+              <div class="mainNum lightBlue"></div>
+              <div class="align-self-end overflow-hidden">
+                <div class="text red"></div>
+                <div class="text green"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="down">
+          <div class="cornerTL"></div>
+          <div class="cornerTR"></div>
+          <div class="cornerBL"></div>
+          <div class="cornerBR"></div>
+          <div id="TWMap"></div>
+          <div class="titleEle">
+            <div class="title">出行服務+大數據</div>
+            <div class="subTitle">交通大數據分析</div>
+          </div>
+          <div class="chargesToday d-flex">
+            <div class="selectArea">
+              <div class="areaTitle">今日實時收費</div>
+              <div class="areaContent">
+                <div class="areaData0">
+                  <div class="text twData" id="tw">全台數據</div>
+                </div>
+              </div>
+            </div>
+            <div id="pieChart1"></div>
+            <div id="pieChart2"></div>
+            <div id="pieChart3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="monthEvent">
+          <div class="title">本月發生事件</div>
+          <div class="slide">
+            <div id="monthEventChart1" class="monthEventItem chartHeight"></div>
+            <div id="monthEventChart2" class="monthEventItem chartHeight"></div>
+          </div>
+        </div>
+        <div class="tollBoothCharges">
+          <div class="title">收費站收費量</div>
+          <div class="tollBoothChargesContent">
+            <div id="tollBoothChargesChart" class="chartHeight"></div>
+            <div class="chargeTable">
+              <div class="tableTitle blue d-flex">
+                <div class="right"></div>
+                <div class="middle"></div>
+                <div class="left"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chargesRanked">
+          <div class="title">收費站收費排行</div>
+          <div id="chargesRankedChart" class="chartHeight"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/fackData.js"></script>
+  <script src="../js/index.js"></script>
+</html>
